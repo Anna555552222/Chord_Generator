@@ -3,12 +3,24 @@
 ## Introduction
 在音樂創作時，我們往往需要從產生一段和弦組開始。本和弦生成器旨在為音樂創作者提供靈感，基於使用者想要的調性、和弦組數量，隨機生成符合好聽的和弦進行規範的和弦組，直到使用者滿意。
 
-## Implementation
-### Interact With Users
-讓使用者依序輸入想要幾個和弦組合、什麼調性、是否加入特殊和弦、是否滿意。
-### Function
-定義一個major函數，包含所有調性，會隨機選擇路徑與和弦。
-為了簡化輸出，定義print_chord與print_suschord函數，此major函數會根據隨機路徑生成一組和弦進行。
+## Manual
+在terminal執行以下指令即可執行程式
+### mac環境
+```
+g++ -std=c++11 -o chord_generator main.cpp major.cpp util.cpp
+./chord_generator
+```
+### Windows環境
+```
+g++ std=c++11 -o chord_generator main.cpp major.cpp util.cpp
+.\chord_generator
+```
+讓使用者依序輸入想要幾個和弦組合、什麼調性、是否加入特殊和弦、是否滿意。  
+詳細步驟如下：  
+執行之後，首先會問你需要幾組和弦進行，輸入一個整數（1~n）。  
+再來會問每一個和弦進行所想要的調性，輸入一個調性（"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"）。  
+接下來會問是否需要包含特殊和弦，輸入（yes/no)。  
+最後詢問滿意度，輸入（yes/no）。  
 
 ## Directions
 ### 和弦種類？
